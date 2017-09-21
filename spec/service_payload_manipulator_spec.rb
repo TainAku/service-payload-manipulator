@@ -143,7 +143,7 @@ RSpec.describe ServicePayloadManipulator do
 				<?xml version="1.0" encoding="UTF-8"?>
 				<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
 					<soapenv:Body>
-						<ns3:WSCustomerSearchClientsGetResponse xmlns:ns3="http://WSCustomerSearchClients11.EQ.CS.ws.alfabank.ru" xmlns:ns2="http://WSCommonTypes10.CS.ws.alfabank.ru">
+						<ns3:WSCustomerSearchClientsGetResponse xmlns:ns3="http://services/" xmlns:ns2="http://services/">
 							<response>
 								<outCommonParms>
 									<outCommonParmsExt>
@@ -161,7 +161,7 @@ RSpec.describe ServicePayloadManipulator do
 			EOF
 
 			manipulator.modify_WSCustomerSearchClientsGetResponse({
-				:namespace => 'http://WSCustomerSearchClients11.EQ.CS.ws.alfabank.ru',
+				:namespace => 'http://services/',
 				:add => [
 					{
 						:node => 'resultSet',
